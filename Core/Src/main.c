@@ -17,10 +17,6 @@
 
 #define THRESHOLD 1000 // Choose a suitable threshold value
 
-// Define HIGH and LOW values
-#define HIGH 1
-#define LOW 0
-
 ADC_HandleTypeDef hadc1;
 
 UART_HandleTypeDef huart3;
@@ -57,9 +53,9 @@ int main(void)
       // Read The ADC Conversion Result & Map It To PWM DutyCycle
        adc_val = HAL_ADC_GetValue(&hadc1);
        if(adc_val >= THRESHOLD){
-    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, HIGH);
+    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET);
        } else {
-    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, LOW);
+    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET);
        }
        HAL_Delay(1000);
   }
