@@ -53,9 +53,9 @@ int main(void)
       // Read The ADC Conversion Result & Map It To PWM DutyCycle
        adc_val = HAL_ADC_GetValue(&hadc1);
        if(adc_val >= THRESHOLD){
-    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET);
+    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_SET); // Modify pin port and number here
        } else {
-    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET);
+    	   HAL_GPIO_WritePin(GPIOD, GPIO_PIN_3, GPIO_PIN_RESET); // Modify pin port and number here
        }
        HAL_Delay(1000);
   }

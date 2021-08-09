@@ -6,7 +6,7 @@ Masks, Hand Sanitizers have become a routine of our lives since the pandemic beg
 
 ![Schematic of project](Images/Schematic.png)
 *Schematic of the project*
-**NOTE:** This schematic is for refrence only. Connect the Analog out of MQ-3 Sensor to ADC1 Channel 7 of your board.
+**NOTE:** This schematic is for refrence only. Connect the Analog out of MQ-3 Sensor to ADC1 Channel 7 of your board. Also change the on-board LED port and pin number accordingly in main.c file line 56 and 58.
 
 ## Working
 
